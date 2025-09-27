@@ -61,6 +61,9 @@ class MTRParser:
         
         # Parse each LUT
         for lut_offset in lut_offsets:
+            if lut_offset == 0x00:
+                continue
+
             lut_header = self.data[lut_offset:lut_offset+8]
             if lut_header != b'LUTC00\x00\x00':
                 raise ValueError(f"Invalid LUT header at offset {lut_offset}")
