@@ -1,0 +1,8 @@
+
+*.pyc
+*.json
+*.mtr
+*.bin
+*.lut
+*.atr
+atr.bin
